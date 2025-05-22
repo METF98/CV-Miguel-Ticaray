@@ -104,6 +104,19 @@ section{
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.pd-2{
+  padding: 2rem;
+}
+.pd-l{
+  padding-left: 2rem;
+}
+.pd-r{
+  padding-right: 2rem;
+}
+.pd_b-t_1{
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+}
 .backg-color-white{
   background-color: rgb(255 255 255 / 1);
 }
@@ -125,6 +138,16 @@ section{
 .backg-trans-hover:hover{
   background-color: rgba(93, 8,8, 1);
   color: rgb(255 255 255);
+}
+.animacion{
+  view-timeline-name: --container;
+  view-timeline-axis: block;
+
+  animation-timeline: --container;
+  animation-name: mostrar;
+
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
 }
 
 /*-------------------------------------------Barra Nav-------------------------------------*/
@@ -200,7 +223,7 @@ nav > div > a > i{
   font-size: 20px;
 }
 .rrss:hover {
-  color:bisque;
+  color:rgb(255 236 207 / 1);
 }
 .div-link a:hover::before{
   transform: scaleX(1);
@@ -225,7 +248,7 @@ header{
   margin: 0;
 }
 .titulo h1>span{
-    color: rgb(51 51 51 / 1);
+    color: rgb(51, 51, 51);
 }
 
 .titulo h2{
@@ -324,7 +347,7 @@ header{
 }
 .info-perfil > p{
   font-size:  1.2rem;
-  color: #3a2d2d;
+  color: rgb(51, 51, 51);
 }
 
 /*------------------------------------------Datos--------------------------------------------------------*/
@@ -346,6 +369,10 @@ header{
   color: rgb(93 8 8 / 1);
   font-weight: 500;
 }
+.dt > div > div > div > p {
+  font-size: 16px;
+  color: rgba(51, 51, 51);
+}
 .icon{
   width: 2.5rem;
   height: 2.5rem;
@@ -357,18 +384,60 @@ header{
   color: rgb(255 255 255 / 1);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*----------------------------------------------Educación-------------------------------------------------*/
+#educacion > div > div > div{
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1), 0px 10px 50px -6px rgb(0 0 0 / .1);
+  background: rgba(255, 236, 207, 0.502);
+  background: linear-gradient(180deg,rgba(255, 236, 207, 0.502) 0%, rgba(255, 236, 207, 0.502) 45%, rgba(255, 255, 255, 1) 36%, rgba(255, 255, 255, 1) 100%);
+  border-radius: 1rem;
+  border:2px solid rgb(219, 203, 180);
+}
+.tx > div > div{
+  gap: 0.2rem;
+}
+.tx > div > div > svg{
+  color: rgb(93 8 8 / 1);
+}
+.tx > div > div > h3{
+  font-size: 20px;
+  color:rgb(51, 51, 51);
+}
+.tx > div > div > p{
+  font-size: 16px;
+  color:#333333CC;
+}
+.tx > div > p{
+  font-size: 16px;
+  color:#333333CC;
+  padding: 1rem 0 0.5rem 0;
+}
+.tx > div > ul{
+  font-size: 16px;
+  color:#333333CC;
+  padding: 1rem 0 1rem 1rem;
+  gap: 3rem;
+}
+.tx > div > ul li{
+  list-style-type:circle;
+}
+.img-educacion{
+  width: 12rem;
+  height: 12rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
+  border-color: rgb(93 8 8 / 0.85);
+  border-width: 12px;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.img-educacion > img{
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
 
 
 
@@ -623,4 +692,15 @@ footer > div > div > div{
     object-fit: contain;
     opacity: 100%;
   }
+}
+@keyframes mostrar {
+  from{
+    opacity: 0;
+    scale: 25%;
+  }
+  to{
+    opacity: 1;
+    scale: 100%;
+  }
+
 }

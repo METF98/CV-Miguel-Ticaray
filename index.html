@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/ea302a5c77.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <!---------------------------Barra Nav ------------------------------------->
+    <!---------------------------Barra Nav --------------------------------------->
     <nav>
       <div class="mg_r-l pd_r-l">
         <div class="titulares">
@@ -39,10 +39,11 @@
         </div>
       </div>
     </nav>
-    <!----------------------------- Main --------------------------------------->
+    <!----------------------------- Main ----------------------------------------->
     <main>
+      <!---------------------------- Header -------------------------------------->
       <header>
-        <div class="section-container pd_r-l">
+        <div class="section-container pd_r-l animacion">
           <div class="flex fila gap-2 between centrado-secundario">
             <div class="titulo">
               <div>
@@ -68,9 +69,9 @@
           </div>
         </div>
       </header>
-      <!----------------------------Perfil -------------------------------------->
+      <!---------------------------- Perfil -------------------------------------->
       <section id="perfil" class="backg-color-white">
-        <div class="section-container pd_r-l mg_r-l">
+        <div class="section-container pd_r-l mg_r-l animacion">
           <h2 class="section-title">PERFIL PROFESIONAL</h2>
           <div>
             <div>
@@ -88,9 +89,9 @@
           </div>
         </div>
       </section>
-      <!---------------------------- Datos -------------------------------------->
+      <!---------------------------- Datos --------------------------------------->
       <section id="datos">
-        <div class="section-container pd_r-l mg_r-l">
+        <div class="section-container pd_r-l mg_r-l animacion">
           <div class="flex column ">
             <h2 class="section-title">DATOS PERSONALES</h2>
             <div class="grid grid-column-2 gap-2 dt">
@@ -138,48 +139,83 @@
           </div>
         </div>
       </section>
-      <!---------------------------- Educacion -------------------------------------->
-
+      <!---------------------------- Educacion ----------------------------------->
       <section id="educacion" class="backg-color-white">
-        <div class="section-container pd_r-l mg_r-l">
+        <div class="section-container pd_r-l mg_r-l animacion">
           <div>
-            <p><strong>UNIVERSIDAD DE ORIENTE</strong></p>
-            <p>Ingeniero de sistemas - Año: 2023</p>
+            <h2 class="section-title" >EDUCACIÓN</h2>
+            <div class="flex between">
+              <!--letras-->
+              <div class="flex column between tx">
+                <div class="flex gap-1 centrado-secundario pd_b-t_1">
+                  <div class="flex fila centrado-primario">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-school w-8 h-8 text-cv-burgundy" data-lov-id="src/components/EducationSection.tsx:13:12" data-lov-name="School" data-component-path="src/components/EducationSection.tsx" data-component-line="13" data-component-file="EducationSection.tsx" data-component-name="School" data-component-content="%7B%22className%22%3A%22w-8%20h-8%20text-cv-burgundy%22%7D">
+                      <path d="M14 22v-4a2 2 0 1 0-4 0v4"></path>
+                      <path d="m18 10 3.447 1.724a1 1 0 0 1 .553.894V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.382a1 1 0 0 1 .553-.894L6 10"></path>
+                      <path d="M18 5v17"></path><path d="m4 6 7.106-3.553a2 2 0 0 1 1.788 0L20 6"></path>
+                      <path d="M6 5v17"></path>
+                      <circle cx="12" cy="9" r="2"></circle>
+                    </svg>
+                  </div>
+                  <div class="flex column">
+                    <h3>UNIVERSIDAD DE ORIENTE</h3>
+                    <p>Ingeniero de sistemas - Año: 2023</p>
+                  </div>
+                </div>
+                <div>
+                  <p>
+                    Formación integral en ingeniería de sistemas
+                    con enfoque en:
+                  </p>
+                  <ul class="flex fila">
+                    <li>Desarrollo de software</li>
+                    <li>Sistemas de información</li>
+                    <li>Gestión de proyectos tecnológicos</li>
+                  </ul>
+                </div>
+              </div>
+              <!--imagen-->
+              <div class="pd-r">
+                <div class="img-educacion">
+                  <img src="./img/UDO-ANACO.jpg" alt="">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <h2 >EDUCACION</h2>
       </section>
-      <!---------------------------- Experiencias -------------------------------------->
-
+      <!---------------------------- Experiencias --------------------------------->
       <section id="experiencia" >
-        <h2 >EXPERIENCIA PROFESIONAL</h2>
-        <div>
-          <h3>PANDA NETWORKS, C. A</h3>
-          <p>ENCARGADO DE SISTEMA</p>
-          <small>julio 2021 - octubre 2021</small>
-          <ul>
-            <li>Gestión de redes de clientes y configuración de equipos Mikrotik. </li>
-            <li>Control de acceso y QOS a clientes dedicados. </li>
-            <li>Instalador de equipos a nivel de cliente. </li>
-          </ul>
-        </div>
-        <div>
-          <h3>TOYORIENTE C. A</h3>
-          <p>SOPORTE TÉCNICO</p>
-          <small>septiembre 2024 - actualidad</small>
+        <div class="section-container pd_r-l mg_r-l animacion">
+          <h2  class=" section-title">EXPERIENCIA PROFESIONAL</h2>
+          <div>
+            <h3>PANDA NETWORKS, C. A</h3>
+            <p>ENCARGADO DE SISTEMA</p>
+            <small>julio 2021 - octubre 2021</small>
             <ul>
-              <li>Líder de capacitación del sistema de gestión</li>
-              <li>Instalación de equipos informáticos y redes</li>
-              <li>Líder estratégico para la optimización de las operaciones</li>
-              <li>Desarrollador a nivel local</li>
-              <li>Gestión de mantenimiento preventivo de equipos informáticos</li>
+              <li>Gestión de redes de clientes y configuración de equipos Mikrotik. </li>
+              <li>Control de acceso y QOS a clientes dedicados. </li>
+              <li>Instalador de equipos a nivel de cliente. </li>
             </ul>
+          </div>
+          <div>
+            <h3>TOYORIENTE C. A</h3>
+            <p>SOPORTE TÉCNICO</p>
+            <small>septiembre 2024 - actualidad</small>
+              <ul>
+                <li>Líder de capacitación del sistema de gestión</li>
+                <li>Instalación de equipos informáticos y redes</li>
+                <li>Líder estratégico para la optimización de las operaciones</li>
+                <li>Desarrollador a nivel local</li>
+                <li>Gestión de mantenimiento preventivo de equipos informáticos</li>
+              </ul>
+          </div>
         </div>
       </section>
-      <!---------------------------- Habilidades -------------------------------------->
-
-      <section id="habilidades" class="backg-color-white">
-        <h2 >HABILIDADES</h2>
+      <!---------------------------- Habilidades ---------------------------------->
+      <section id="habilidades" class="backg-color-white animacion">
+        <div class="section-container pd_r-l mg_r-l animacion">
+          <h2 class=" section-title">HABILIDADES</h2>
           <ul>
             <li>Destreza en computación, Word, Excel, Publisher, Power Point. </li>
             <li>
@@ -193,65 +229,67 @@
             <li>Conocimientos básicos en POO</li>
             <li>Configuración e instalación de equipos de redes (LAN y WIFI) </li>
           </ul>
+        </div>
       </section>
-      <!---------------------------- Poyectos -------------------------------------->
-
+      <!---------------------------- Poyectos ------------------------------------->
       <section id="proyectos">
-        <h2 >PROYECTOS</h2>
-        <div>
-          <h3>SMI - SISTEMA MULTINVENTARIO</h3>
-          <p>
-            Encargado de la gestión de herramientas utilizadas en taller de mecánica de Concesionario,
-            cuenta con registro de solicitudes de herramientas, niveles de usuarios, buscador en tiempo real e impresión de reportes para control de inventario.
-          </p>
-          <h4>Tecnologías utilizadas:</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JAVASCRIPT</li>
-            <li>PHP</li>
-            <li>SQL</li>
-          </ul>
-        </div>
-        <div>
-          <h3>PLANTILLAS HOTSPOT</h3>
-          <p>
-            Plantillas utilizadas para portal cautivo en red de wifi libre para clientes, la cual cuenta con un formulario para captar datos de contacto de los clientes,
-            estos son envidos a un correo específico para envió de promoción y ofertas.
-          </p>
-          <h4>Tecnologías utilizadas:</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JAVASCRIPT</li>
-            <li>PHP</li>
-            <li>SQL</li>
-          </ul>
-        </div>
-        <div>
-          <h3>FICHAS DE VEHICULOS</h3>
-          <p>
-            Pagina de uso local en red wifi de invitados, creada para concesionarios donde se visualizan los modelos de los vehículos disponibles,
-            sus características y fichas técnicas en tiempo real. A su vez cuenta con enlaces que redirigen a la página web principal del mismo
-          </p>
-          <h4>Tecnologías utilizadas:</h4>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JAVASCRIPT</li>
-          </ul>
+        <div class="section-container pd_r-l mg_r-l animacion">
+          <h2 class=" section-title">PROYECTOS</h2>
+          <div>
+            <h3>SMI - SISTEMA MULTINVENTARIO</h3>
+            <p>
+              Encargado de la gestión de herramientas utilizadas en taller de mecánica de Concesionario,
+              cuenta con registro de solicitudes de herramientas, niveles de usuarios, buscador en tiempo real e impresión de reportes para control de inventario.
+            </p>
+            <h4>Tecnologías utilizadas:</h4>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JAVASCRIPT</li>
+              <li>PHP</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3>PLANTILLAS HOTSPOT</h3>
+            <p>
+              Plantillas utilizadas para portal cautivo en red de wifi libre para clientes, la cual cuenta con un formulario para captar datos de contacto de los clientes,
+              estos son envidos a un correo específico para envió de promoción y ofertas.
+            </p>
+            <h4>Tecnologías utilizadas:</h4>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JAVASCRIPT</li>
+              <li>PHP</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3>FICHAS DE VEHICULOS</h3>
+            <p>
+              Pagina de uso local en red wifi de invitados, creada para concesionarios donde se visualizan los modelos de los vehículos disponibles,
+              sus características y fichas técnicas en tiempo real. A su vez cuenta con enlaces que redirigen a la página web principal del mismo
+            </p>
+            <h4>Tecnologías utilizadas:</h4>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JAVASCRIPT</li>
+            </ul>
+          </div>
         </div>
       </section>
       <!---------------------------- Idiomas -------------------------------------->
-
       <section id="idiomas" class="backg-color-white">
-        <h2 >IDIOMAS</h2>
-        <p>Español - Nativo</p>
-        <p>Ingles - Básico</p>
+        <div class="section-container pd_r-l mg_r-l animacion">
+          <h2 class=" section-title">IDIOMAS</h2>
+          <p>Español - Nativo</p>
+          <p>Ingles - Básico</p>
+        </div>
       </section>
     </main>
-      <!----------------------------  Footer -------------------------------------->
-
+    <!----------------------------  Footer ---------------------------------------->
     <footer>
       <div>
         <div>
