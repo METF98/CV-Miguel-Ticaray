@@ -4,16 +4,17 @@
   --color-2: rgb(255 236 207 / 1);
   --color-3:  rgb(255 255 255);
   --color-4:rgb(93 8 8 / 0.85);
+  --background-color-1:linear-gradient(180deg,rgba(255, 236, 207, 0.502) 0%, rgba(255, 236, 207, 0.502) 45%, rgba(255, 255, 255, 1) 36%, rgba(255, 255, 255, 1) 100%);
   --color-border-1:rgb(219, 203, 180);
   --color-cartas-1:rgba(255, 236, 207, 0.502);
-  --color-texto-1:rgb(51, 51, 51);
+  --color-texto-1:rgb(51 51 51 / 1);
   --color-texto-2:rgba(51, 51, 51, 0.8);
+  --color-texto-3:rgba(51, 51, 51);
   --sombra-1:  0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
-
+  --sombra-2:0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+  --sombra-3: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1), 0px 2px 80px -6px rgb(0 0 0 / .1);
+  --radius-inferior: 0 0 1rem 1rem;
 }
-
-
-
 
 *{
   margin: 0;
@@ -24,7 +25,7 @@
   border-style: solid;
 }
 body{
-  background-color: rgb(255 236 207 /1);
+  background-color: var(--color-2);
   min-height: 100vh;
 }
 main{
@@ -148,11 +149,23 @@ section{
   transition: 0.2s all ease-in-out;
 }
 .backg-vine-hover:hover{
-  background-color: rgba(93, 8,8, 0.85);
+  background-color: var(--color-4);
 }
 .backg-trans-hover:hover{
-  background-color: rgba(93, 8,8, 1);
+  background-color: var(--color-1);
   color: var(--color-3);
+}
+.card-grande{
+  padding: 1.5rem;
+  box-shadow:var(--sombra-3);
+  border-radius: var(--radius-inferior);
+  border:2px solid var(--color-border-1);
+}
+.card-pequeña{
+  padding: 2rem;
+  box-shadow: var(--sombra-3);
+  background-color: var(--color-3);
+  border-radius: 1rem;
 }
 .animacion-1{
   view-timeline-name: --container;
@@ -161,28 +174,20 @@ section{
   animation-timeline: --container;
   animation-name: mostrar;
 
-  animation-range: entry 25% cover 50%;
+  animation-range: entry 25% cover 30%;
   animation-fill-mode: both;
 }
 .animacion-2{
-  view-timeline-name: --texto;
-  view-timeline-axis: block;
-
-  animation-timeline: --texto;
-  animation-name: aparecer-left;
-
-  animation-range: entry 25% cover 50%;
-  animation-fill-mode: both;
+  animation: aparecer-left 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 .animacion-3{
-  view-timeline-name: --img;
-  view-timeline-axis: block;
-
-  animation-timeline: --img;
-  animation-name: aparecer-right;
-
-  animation-range: entry 25% cover 50%;
-  animation-fill-mode: both;
+  animation: aparecer-right 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.animacion-4{
+  animation: aparecer-top 1s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 /*-------------------------------------------Barra Nav-------------------------------------*/
@@ -283,14 +288,14 @@ header{
   margin: 0;
 }
 .titulo h1>span{
-    color: var(--color-texto-1);
+  color: var(--color-texto-1);
 }
 
 .titulo h2{
   margin-top: 20px;
   font-size: 1.875rem;
   line-height: 2.25rem;
-  color: rgb(51 51 51 / 1);
+  color: var(--color-texto-1);
   font-weight: 500;
 }
 .titulo .btn-titulo{
@@ -299,7 +304,7 @@ header{
   gap: 1rem;
 }
 .titulo .btn-titulo a{
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+  box-shadow: var(--sombra-2);
   padding-top: .75rem;
   padding-bottom: .75rem;
   padding-left: 1.5rem;
@@ -317,7 +322,7 @@ header{
 .img > div > div{
   width: 30rem;
   height: 30rem;
-  box-shadow: var(--sombra-1);
+  box-shadow: var(--sombra-3);
   background-color: var(--color-1);
   border-color: var(--color-3);
   border-width: 6px;
@@ -327,9 +332,12 @@ header{
 .img > div > div > img{
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  object-position: center;
   max-width: 100%;
   display: block;
-  animation: img-rotate 25s linear infinite;
+  animation: img-rotate 10s linear infinite;
+  animation-delay: 2s;
 }
 
 /*----------------------------------------Perfil---------------------------------------------*/
@@ -340,18 +348,6 @@ header{
   line-height: 2.5rem;
   font-weight: 700;
   color: var(--color-1);
-}
-#perfil > div >div {
-  padding: 2rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1), 0px 10px 50px -6px rgb(0 0 0 / .1);
-  background-color: var(--color-3);
-  border-radius: 1rem;
-}
-#perfil > div > div > div {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  align-items: flex-start;
 }
 .img-perfil{
   width: 33.333333%;
@@ -385,12 +381,7 @@ header{
 }
 
 /*------------------------------------------Datos--------------------------------------------------------*/
-#datos > div >div>div>div {
-  padding: 2rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
-  background-color: var(--color-3);
-  border-radius: 1rem;
-}
+
 .dt > div > div > div {
   font-size: 16px;
   display: flex;
@@ -405,12 +396,12 @@ header{
 }
 .dt > div > div > div > p {
   font-size: 16px;
-  color: rgba(51, 51, 51);
+  color: var(--color-texto-3);
 }
 .icon{
   width: 2.5rem;
   height: 2.5rem;
-  box-shadow: var(--sombra-1)
+  box-shadow: var(--sombra-1);
   background-color:var(--color-1);
   border-radius: 9999px;
 }
@@ -421,9 +412,8 @@ header{
 /*----------------------------------------------Educación-------------------------------------------------*/
 #educacion > div > div > div{
   padding: 1.5rem;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1), 0px 10px 50px -6px rgb(0 0 0 / .1);
-  background: var(--color-cartas-1);
-  background: linear-gradient(180deg,rgba(255, 236, 207, 0.502) 0%, rgba(255, 236, 207, 0.502) 45%, rgba(255, 255, 255, 1) 36%, rgba(255, 255, 255, 1) 100%);
+  box-shadow:var(--sombra-3);
+  background: var(--background-color-1);
   border-radius: 1rem;
   border:2px solid var(--color-border-1);
 }
@@ -632,16 +622,16 @@ footer > div > div > div{
     content: url("./../img/foto5.png");
     object-position: center;
     object-fit: contain;
-    opacity: 100%;
+    opacity: 50%;
   }
   75%{
     content: url("./../img/foto5.png");
     object-position: center;
     object-fit: contain;
-    opacity: 50%;
+    opacity: 0%;
   }
   80%{
-    content: url("./../img/foto5.png");
+    content: url("./../img/foto.png");
     object-position: center;
     object-fit: contain;
     opacity: 0%;
@@ -650,13 +640,13 @@ footer > div > div > div{
     content: url("./../img/foto.png");
     object-position: center;
     object-fit: contain;
-    opacity: 0%;
+    opacity: 50%;
   }
   90%{
     content: url("./../img/foto.png");
     object-position: center;
     object-fit: contain;
-    opacity: 50%;
+    opacity: 100%;
   }
   100%{
     content: url("./../img/foto.png");
@@ -695,6 +685,17 @@ footer > div > div > div{
   to{
     opacity: 1;
     transform: translateX(0%);
+  }
+
+}
+@keyframes aparecer-top {
+  from{
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0%);
   }
 
 }
