@@ -1,4 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+:root{
+  --color-1: rgb(93 8 8 / 1);
+  --color-2: rgb(255 236 207 / 1);
+  --color-3:  rgb(255 255 255);
+  --color-4:rgb(93 8 8 / 0.85);
+  --color-border-1:rgb(219, 203, 180);
+  --color-cartas-1:rgba(255, 236, 207, 0.502);
+  --color-texto-1:rgb(51, 51, 51);
+  --color-texto-2:rgba(51, 51, 51, 0.8);
+  --sombra-1:  0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
+
+}
+
+
+
 
 *{
   margin: 0;
@@ -118,18 +133,18 @@ section{
   padding-top: 0.5rem;
 }
 .backg-color-white{
-  background-color: rgb(255 255 255 / 1);
+  background-color: var(--color-3);
 }
 .backg-trans{
   background-color: transparent;
-  color: rgb(93 8 8 / 1);
-  border-color: rgb(93 8 8 / 1);
+  color: var(--color-1);
+  border-color: var(--color-1);
   border-width: 2px;
   transition: 0.2s all ease-in-out;
 }
 .backg-color-vine{
-  background-color:rgb(93 8 8 / 1);
-  color: rgb(255 255 255);
+  background-color:var(--color-1);
+  color: var(--color-3);
   transition: 0.2s all ease-in-out;
 }
 .backg-vine-hover:hover{
@@ -137,9 +152,9 @@ section{
 }
 .backg-trans-hover:hover{
   background-color: rgba(93, 8,8, 1);
-  color: rgb(255 255 255);
+  color: var(--color-3);
 }
-.animacion{
+.animacion-1{
   view-timeline-name: --container;
   view-timeline-axis: block;
 
@@ -149,11 +164,31 @@ section{
   animation-range: entry 25% cover 50%;
   animation-fill-mode: both;
 }
+.animacion-2{
+  view-timeline-name: --texto;
+  view-timeline-axis: block;
+
+  animation-timeline: --texto;
+  animation-name: aparecer-left;
+
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
+.animacion-3{
+  view-timeline-name: --img;
+  view-timeline-axis: block;
+
+  animation-timeline: --img;
+  animation-name: aparecer-right;
+
+  animation-range: entry 25% cover 50%;
+  animation-fill-mode: both;
+}
 
 /*-------------------------------------------Barra Nav-------------------------------------*/
 
 nav{
-  background-color: rgb(93 8 8 / 1);
+  background-color: var(--color-1);
   padding-top: 1rem;
   padding-bottom: 1rem;
   z-index: 50;
@@ -212,18 +247,18 @@ nav > div > a > i{
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-3);
   transform: scaleX(0);
   transition: transform 0.3s ease;
   transform-origin: left;
 }
 .rrss{
   text-decoration: none;
-  color: #fff;
+  color: var(--color-3);
   font-size: 20px;
 }
 .rrss:hover {
-  color:rgb(255 236 207 / 1);
+  color:var(--color-2);
 }
 .div-link a:hover::before{
   transform: scaleX(1);
@@ -234,7 +269,7 @@ nav > div > a > i{
 header{
   padding-top: 12rem;
   padding-bottom: 12rem;
-  background-color: rgb(255 236 207 / 1);
+  background-color: var(--color-2);
   position: relative;
 }
 .titulo{
@@ -243,12 +278,12 @@ header{
 .titulo h1{
   font-size: 3.75rem;
   line-height: 1;
-  color: rgb(93 8 8 / 1);;
+  color: var(--color-1);;
   font-weight: 700;
   margin: 0;
 }
 .titulo h1>span{
-    color: rgb(51, 51, 51);
+    color: var(--color-texto-1);
 }
 
 .titulo h2{
@@ -282,13 +317,12 @@ header{
 .img > div > div{
   width: 30rem;
   height: 30rem;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
-  background-color: rgb(52 152 219 / 1);
-  border-color: rgb(255 255 255);
+  box-shadow: var(--sombra-1);
+  background-color: var(--color-1);
+  border-color: var(--color-3);
   border-width: 6px;
   border-radius: 9999px;
   overflow: hidden;
-  animation: background-color-rotate 25.5s linear infinite;
 }
 .img > div > div > img{
   width: 100%;
@@ -305,12 +339,12 @@ header{
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 700;
-  color: rgb(93 8 8 / 1);
+  color: var(--color-1);
 }
 #perfil > div >div {
   padding: 2rem;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1), 0px 10px 50px -6px rgb(0 0 0 / .1);
-  background-color: rgb(255 255 255 / 1);
+  background-color: var(--color-3);
   border-radius: 1rem;
 }
 #perfil > div > div > div {
@@ -347,14 +381,14 @@ header{
 }
 .info-perfil > p{
   font-size:  1.2rem;
-  color: rgb(51, 51, 51);
+  color: var(--color-texto-1);
 }
 
 /*------------------------------------------Datos--------------------------------------------------------*/
 #datos > div >div>div>div {
   padding: 2rem;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
-  background-color: rgb(255 255 255 / 1);
+  background-color: var(--color-3);
   border-radius: 1rem;
 }
 .dt > div > div > div {
@@ -366,7 +400,7 @@ header{
 }
 .dt > div > div > div > h5 {
   font-size: 14px;
-  color: rgb(93 8 8 / 1);
+  color: var(--color-1);
   font-weight: 500;
 }
 .dt > div > div > div > p {
@@ -376,45 +410,45 @@ header{
 .icon{
   width: 2.5rem;
   height: 2.5rem;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
-  background-color:rgb(93 8 8 / 1);
+  box-shadow: var(--sombra-1)
+  background-color:var(--color-1);
   border-radius: 9999px;
 }
 .icon > i{
-  color: rgb(255 255 255 / 1);
+  color: var(--color-3);
 }
 
 /*----------------------------------------------Educación-------------------------------------------------*/
 #educacion > div > div > div{
   padding: 1.5rem;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1), 0px 10px 50px -6px rgb(0 0 0 / .1);
-  background: rgba(255, 236, 207, 0.502);
+  background: var(--color-cartas-1);
   background: linear-gradient(180deg,rgba(255, 236, 207, 0.502) 0%, rgba(255, 236, 207, 0.502) 45%, rgba(255, 255, 255, 1) 36%, rgba(255, 255, 255, 1) 100%);
   border-radius: 1rem;
-  border:2px solid rgb(219, 203, 180);
+  border:2px solid var(--color-border-1);
 }
 .tx > div > div{
   gap: 0.2rem;
 }
 .tx > div > div > svg{
-  color: rgb(93 8 8 / 1);
+  color: var(--color-1);
 }
 .tx > div > div > h3{
   font-size: 20px;
-  color:rgb(51, 51, 51);
+  color:var(--color-texto-1);
 }
 .tx > div > div > p{
   font-size: 16px;
-  color:#333333CC;
+  color:var(--color-texto-2);
 }
 .tx > div > p{
   font-size: 16px;
-  color:#333333CC;
+  color:var(--color-texto-2);
   padding: 1rem 0 0.5rem 0;
 }
 .tx > div > ul{
   font-size: 16px;
-  color:#333333CC;
+  color:var(--color-texto-2);
   padding: 1rem 0 1rem 1rem;
   gap: 3rem;
 }
@@ -424,8 +458,8 @@ header{
 .img-educacion{
   width: 12rem;
   height: 12rem;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / .1), 0 8px 10px -6px rgb(0 0 0 / .1);
-  border-color: rgb(93 8 8 / 0.85);
+  box-shadow: var(--sombra-1);
+  border-color: var(--color-4);
   border-width: 12px;
   border-radius: 9999px;
   overflow: hidden;
@@ -447,7 +481,7 @@ footer{
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  background-color: #490808;
+  background-color: var(--color-1);
   color: #fff;
 }
 footer > div{
@@ -475,7 +509,7 @@ footer > div > div > div{
   align-items: center;
 }
 .perfil,.experiencia, .proyectos{
-  background-color: #490808;
+  background-color: var(--color-1);
   color: #fff;
   height: 50vh;
   min-height: 50vh;
@@ -515,68 +549,6 @@ footer > div > div > div{
 /*==========================
         Animaciones
 ==========================*/
-@keyframes background-color-rotate {
-  0%{
-    background-color: rgb(52, 152, 219);
-  }
-  10%{
-    background-color: rgba(52, 152, 219, 0.651);
-  }
-  15%{
-    background-color: rgba(52, 152, 219, 0.349);
-  }
-  20%{
-    background-color: rgba(86, 23, 26, 0.349);
-  }
-  25%{
-    background-color: rgba(86, 23, 26, 0.651);
-  }
-  30%{
-    background-color: rgb(86, 23, 26);
-  }
-  35%{
-    background-color: rgb(86, 23, 26);
-  }
-  40%{
-    background-color: rgba(86, 23, 26, 0.651);
-  }
-  45%{
-    background-color: rgba(86, 23, 26, 0.349);
-  }
-  50%{
-    background-color: rgba(220 , 144 , 60, 0.349);
-  }
-  55%{
-    background-color: rgba(220 , 144 , 60, 0.651);
-  }
-  60%{
-    background-color: rgba(220 , 144 , 60);
-  }
-  65%{
-    background-color: rgba(220 , 144 , 60);
-  }
-  70%{
-    background-color: rgba(220 , 144 , 60, 0.651);
-  }
-  75%{
-    background-color: rgba(220 , 144 , 60, 0.349);
-  }
-  80%{
-    background-color: rgba(52, 152, 219, 0.349);
-  }
-  85%{
-    background-color: rgba(52, 152, 219, 0.651);
-  }
-  90%{
-    background-color: rgb(52, 152, 219);
-  }
-  95%{
-    background-color: rgb(52, 152, 219);
-  }
-  100%{
-    background-color: rgb(52, 152, 219);
-  }
-}
 @keyframes img-rotate {
   0%{
     content: url("./../img/foto.png");
@@ -701,6 +673,28 @@ footer > div > div > div{
   to{
     opacity: 1;
     scale: 100%;
+  }
+
+}
+@keyframes aparecer-left {
+  from{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+
+}
+@keyframes aparecer-right {
+  from{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0%);
   }
 
 }
